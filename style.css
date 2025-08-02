@@ -1,0 +1,1003 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /*1rem-10px*/
+
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #132a13;
+
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+/* NAVBAR STYLING*/
+.hamburger {
+  display: none;
+  font-size: 2.4rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 10rem 1rem 10rem;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-links a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}
+.logo-name {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.fa-solid {
+  font-size: 2rem;
+}
+.nav-icons {
+  display: flex;
+  gap: 2rem;
+}
+.nav-icons i {
+  font-size: 1.6rem;
+  color: white;
+}
+/*HERO SECTION STYLING*/
+
+.hero {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  margin-left: 10rem;
+  margin-right: 20rem;
+}
+.main-heading {
+  color: white;
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+.hero-image {
+  position: relative;
+  margin-left: 5rem;
+
+  background-color: #ffffff;
+  border-top-left-radius: 17rem;
+  border-top-right-radius: 17rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price-tag {
+  position: absolute;
+  top: 20rem; /* adjust as needed */
+  left: -2rem; /* positions half the circle outside */
+  background-color: #1b5e20; /* dark green */
+  color: white;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  z-index: 10;
+}
+.hero-text {
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+/* .btn {
+  margin-top: 2rem;
+  background-color: #1b5e20;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+} */
+.services {
+  padding: 4rem;
+  background-color: #1b5e20;
+}
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.card {
+  flex: 1;
+  padding: 2rem;
+
+  position: relative;
+}
+.card i {
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.card h3 {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  color: white;
+}
+.card:nth-child(1)::after,
+.card:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  width: 0.1rem;
+  height: 100%;
+  background-color: #ccc;
+}
+.hero-section {
+  background-color: white;
+  padding: 4rem;
+  display: flex;
+
+  gap: 4rem;
+}
+
+.plant-card {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa; /* subtle contrast from white */
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.05);
+  gap: 3rem;
+}
+
+.plant-image img {
+  border-radius: 1.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.plant-text {
+  flex: 1;
+}
+
+.plant-text h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.plant-text p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.btn {
+  background-color: #1b5e20;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+.main-content {
+  background-color: white;
+}
+.section-title {
+  color: #1b5e20;
+  font-size: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.explore-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.our-products {
+  padding: 6rem 4rem;
+  background-color: #fff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 3rem; /* space between cards */
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #f8f9fa;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.product-card img {
+  width: 100%; /* makes it responsive within the card */
+  height: 20rem; /* fixed height */
+  object-fit: cover; /* crops excess and fills box */
+  border-radius: 1rem; /* optional: smooth corners */
+  margin-bottom: 1.5rem;
+}
+
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.product-card p {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.product-card .btn {
+  background-color: #1b5e20;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.8rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #388e3c;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* pop-up effect */
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.15);
+}
+.importance-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #132a13; /* dark green */
+  padding: 6rem 4rem;
+  gap: 4rem;
+  flex-wrap: wrap; /* ensures responsive wrap on small screens */
+  color: white;
+}
+
+.importance-heading,
+.importance-text {
+  flex: 1;
+  max-width: 30%;
+}
+
+.importance-text p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.importance-image {
+  flex: 1;
+  max-width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-plant {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%; /* make it round */
+  object-fit: cover;
+  border: 0.4rem solid white;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.display-plant.first {
+  position: relative;
+  z-index: 2;
+  margin-right: -4rem; /* makes first image overlap second */
+}
+
+.display-plant.second {
+  position: relative;
+  z-index: 1;
+}
+.plant-care-section {
+  margin-top: 5rem;
+}
+.plant-care-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+}
+.plant-care-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 5rem 5rem 0 5rem;
+  background-color: #f5f5f5; /* optional light background */
+}
+
+.plant-care {
+  flex: 1;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.plant-care:hover {
+  transform: translateY(-5px);
+}
+
+.plant-care i {
+  background-color: #14532d; /* dark green */
+  color: white;
+  padding: 2rem;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+}
+
+.plant-care h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #14532d;
+}
+
+.plant-care p {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.5;
+}
+.grow-with-us {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 4rem 2rem;
+  /* margin: 5rem auto;*/
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.grow-image {
+  display: flex;
+
+  align-items: center;
+  gap: 3rem;
+}
+
+.grow-image img {
+  width: 100%;
+  height: auto;
+  max-width: 70rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.grow-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #14532d;
+}
+
+.grow-text {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.grow-title p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #132a13;
+  padding: 4rem 2rem;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Footer Title Centered */
+.footer-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Email Subscribe Styling */
+.email-subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.8rem;
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+  gap: 1rem;
+}
+
+.email-input {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  flex-grow: 1;
+}
+
+.send-btn {
+  background-color: orange;
+  color: white;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-btn i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Contact Section Container */
+.contact-us-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Address Section */
+.address-section {
+  flex: 1;
+  min-width: 20rem;
+}
+
+/* Social Media Section */
+.social-media {
+  flex: 1;
+  min-width: 20rem;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.social-media h3 {
+  margin-bottom: 1rem;
+}
+
+.social-media p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  background-color: white;
+  color: #333;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #ddd;
+}
+
+.back-to-nav {
+  flex: 1;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; /* Center horizontally */
+  /* justify-content: center; /* Center vertically */
+}
+
+.back-to-nav h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.back-to-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.back-to-nav ul li {
+  margin-bottom: 0.8rem;
+}
+
+.back-to-nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s;
+}
+
+.back-to-nav ul li a:hover {
+  color: green;
+}
+/*----------MEDIA QUERIES--------------------*/
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: 1.5rem;
+  }
+
+  .nav-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1.2rem;
+    padding-left: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+/*----------HERO SECTION----------------*/
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: row; /* Stack image below text on mobile */
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 2rem 0 2rem; /* Reduce left/right margins */
+    gap: 2rem;
+  }
+
+  .main-heading {
+    font-size: 2rem; /* smaller heading */
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .hero-image {
+    width: 100%;
+    max-width: 220px;
+    margin-left: 1rem;
+    border-top-left-radius: 12rem;
+    border-top-right-radius: 12rem;
+  }
+
+  .hero-images {
+    width: 100%;
+    height: auto;
+  }
+
+  .price-tag {
+    top: 12rem;
+    left: -1.5rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+  .hero-content {
+    max-width: 60%;
+  }
+
+  .service-cards {
+    flex-direction: row; /* ✅ Keep cards side by side */
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem 1rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .card p {
+    display: none; /* ✅ Hide paragraph */
+  }
+
+  .card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  /* ✅ Keep the vertical lines */
+  .card:nth-child(1)::after,
+  .card:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.8rem; /* slightly reduced for tighter layout */
+    width: 0.1rem;
+    height: 100%;
+    background-color: #ccc;
+    display: block;
+  }
+
+  .hero-section {
+    flex-direction: row; /* ✅ Keep cards side by side */
+    flex-wrap: wrap; /* ✅ Allow wrapping if screen is very tight */
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .plant-card {
+    flex: 1 1 100%; /* ✅ Allow card to shrink if needed */
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .plant-text h3 {
+    font-size: 2rem;
+  }
+
+  .plant-text p {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .plant-image img {
+    width: 120px;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem; /* ↓ smaller heading */
+    text-align: center;
+  }
+
+  .explore-buttons {
+    flex-direction: row; /* ↓ stack buttons vertically */
+    gap: 1.5rem; /* ↓ less spacing between buttons */
+    margin-top: 2rem;
+  }
+
+  .btn {
+    font-size: 1.4rem; /* ↓ slightly smaller buttons */
+    padding: 0.8rem 1.5rem;
+  }
+
+  .our-products {
+    padding: 3rem 2rem; /* ↓ reduce section padding */
+  }
+  /* base responsive typography for product card */
+  .product-card h3 {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+  }
+
+  .product-card p {
+    font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+  }
+
+  /* make image height adapt instead of fixed */
+
+  /* two columns layout for medium screens */
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .product-card .btn {
+    padding: 0.9rem 1.6rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+  }
+  /* Responsive tweaks for importance section */
+
+  .importance-section {
+    flex-wrap: nowrap; /* keep side-by-side */
+    gap: 0.5rem;
+    padding: 3rem 1rem;
+    overflow: visible; /* ensure no forced scrollbar */
+  }
+
+  /* Allow aggressive shrinking (overrides any previous min-width) */
+  .importance-heading,
+  .importance-text,
+  .importance-image {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none; /* if you had max-width:30% earlier, this lets them shrink proportionally */
+  }
+
+  .main-heading {
+    font-size: 1.3rem; /* smaller title */
+    margin-bottom: 0.2rem;
+  }
+
+  .importance-text p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .display-plant {
+    width: 7rem;
+    height: 7rem;
+    border-width: 0.2rem;
+  }
+
+  .display-plant.first {
+    margin-right: -1rem; /* reduce overlap to save width */
+  }
+
+  .btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .plant-care-section {
+    text-align: center; /* ensure heading and text are centered */
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .plant-care-section .section-title,
+  .plant-care-text {
+    margin: 0 auto;
+  }
+
+  .plant-care-text {
+    font-size: 1.6rem; /* slightly smaller for mobile */
+    display: block; /* remove flex so text centers naturally */
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .plant-care-steps {
+    flex-direction: column; /* stack vertically */
+    gap: 1.5rem;
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  .plant-care {
+    width: 100%; /* full width */
+    padding: 1.5rem;
+  }
+
+  .plant-care h3 {
+    font-size: 1.6rem;
+  }
+
+  .plant-care p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .plant-care i {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .grow-image {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .grow-image img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.75rem;
+  }
+
+  .grow-title {
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .grow-text {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .grow-title p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+  .grow-title h3 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    align-self: center;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-title {
+    text-align: center;
+    font-size: 1.8rem; /* slightly smaller */
+    margin-bottom: 1.5rem;
+  }
+
+  .email-subscribe {
+    flex-direction: row; /* stack input and button */
+    align-items: center;
+    max-width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .email-input {
+    width: 100%;
+    max-width: 20rem; /* limit width so it doesn’t stretch too much */
+    text-align: center;
+  }
+
+  .send-btn {
+    width: auto;
+    height: auto;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .send-btn i {
+    font-size: 1.6rem;
+  }
+
+  .contact-us-section {
+    flex-wrap: nowrap; /* keep side-by-side */
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    overflow: hidden; /* avoid outer scrollbar if possible */
+  }
+
+  .address-section,
+  .social-media,
+  .back-to-nav {
+    flex: 1 1 0; /* allow aggressive shrinking */
+    min-width: 0; /* override original min-width to prevent forced wrap */
+    padding: 0 0.5rem;
+  }
+
+  .social-media {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 0 1rem;
+  }
+
+  .social-media p {
+    font-size: 1rem; /* smaller text to fit */
+    margin-bottom: 1rem;
+  }
+
+  .back-to-nav h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .back-to-nav ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .back-to-nav ul li a {
+    font-size: 0.85rem;
+  }
+
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
